@@ -51,7 +51,7 @@ if (typeof L !== 'undefined' && document.getElementById('regional-map')) {
   const map = L.map('regional-map', {
     center: [45.47, -84.62],
     zoom: 9,
-    minZoom: 8,
+    minZoom: 7,
     maxZoom: 11,
     zoomControl: true,
     scrollWheelZoom: false,
@@ -64,7 +64,7 @@ if (typeof L !== 'undefined' && document.getElementById('regional-map')) {
   });
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    minZoom: 8,
+    minZoom: 7,
     maxZoom: 11,
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'
