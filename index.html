@@ -9,154 +9,50 @@
   <meta property="og:description" content="A comfortable Northern Michigan getaway for up to 8 guests.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://clinkscabin.com/">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="stylesheet" href="styles.css">
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "VacationRental",
-    "name": "Clink's Cabin",
-    "description": "A 3-bedroom, 2-bath vacation home in Indian River, Michigan, sleeping up to 8 guests.",
-    "occupancy": {"@type": "QuantitativeValue", "maxValue": 8},
-    "numberOfBedrooms": 3,
-    "numberOfBathroomsTotal": 2,
-    "address": {"@type": "PostalAddress", "addressLocality": "Indian River", "addressRegion": "MI", "addressCountry": "US"},
-    "email": "clinks.cabin@gmail.com",
-    "url": "https://clinkscabin.com/"
+    "@context":"https://schema.org","@type":"VacationRental","name":"Clink's Cabin","description":"A 3-bedroom, 2-bath vacation home in Indian River, Michigan, sleeping up to 8 guests.","occupancy":{"@type":"QuantitativeValue","maxValue":8},"numberOfBedrooms":3,"numberOfBathroomsTotal":2,"address":{"@type":"PostalAddress","addressLocality":"Indian River","addressRegion":"MI","addressCountry":"US"},"email":"clinks.cabin@gmail.com","url":"https://clinkscabin.com/"
   }
   </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="Clink's Cabin home">
-      <span class="brand-mark">CC</span>
-      <span><strong>Clink's Cabin</strong><small>Indian River, Michigan</small></span>
-    </a>
+    <a class="brand" href="#top" aria-label="Clink's Cabin home"><span class="brand-mark">CC</span><span><strong>Clink's Cabin</strong><small>Indian River, Michigan</small></span></a>
     <button class="menu-toggle" aria-expanded="false" aria-controls="nav">Menu</button>
-    <nav id="nav" aria-label="Main navigation">
-      <a href="#cabin">The Cabin</a>
-      <a href="#gallery">Photo Tour</a>
-      <a href="#sleep">Bedrooms</a>
-      <a href="#area">Explore</a>
-      <a class="button small" href="#contact">Check Availability</a>
-    </nav>
+    <nav id="nav" aria-label="Main navigation"><a href="#cabin">The Cabin</a><a href="#gallery">Photo Tour</a><a href="#sleep">Bedrooms</a><a href="#area">Explore</a><a class="button small" href="#contact">Check Availability</a></nav>
   </header>
-
   <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Northern Michigan starts here</p>
-        <h1>Clink's Cabin</h1>
-        <p class="hero-copy">A comfortable Indian River retreat for lake days, trail adventures and evenings around the fire.</p>
-        <div class="facts" aria-label="Property highlights">
-          <span>Sleeps 8</span><span>3 bedrooms</span><span>2 full bathrooms</span>
-        </div>
-        <div class="actions">
-          <a class="button" href="#contact">Check Availability</a>
-          <a class="button ghost" href="#gallery">View the Cabin</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="intro section" id="cabin">
-      <div>
-        <p class="eyebrow">Welcome to Indian River</p>
-        <h2>Your comfortable home base for an Up North getaway</h2>
-      </div>
-      <div>
-        <p>Clink's Cabin combines relaxed indoor spaces, a fully equipped kitchen and inviting outdoor areas in a convenient Northern Michigan location. Spend the day boating, fishing, exploring nearby communities or enjoying winter recreation, then return to the deck, covered gazebo and fire pit.</p>
-        <p>The home accommodates up to eight guests with two queen bedrooms, a twin bedroom, a sofa bed and two full bathrooms.</p>
-      </div>
-    </section>
-
-    <section class="features section tinted">
-      <article><span class="icon">⌂</span><h3>Room to gather</h3><p>Open living, dining and kitchen areas provide comfortable shared space for family and friends.</p></article>
-      <article><span class="icon">♨</span><h3>Outdoor living</h3><p>Enjoy the deck, covered gazebo, spacious yard and an outdoor fire pit gathering area.</p></article>
-      <article><span class="icon">≈</span><h3>Close to adventure</h3><p>Convenient to Burt Lake, Mullett Lake, nearby beaches, trails and Northern Michigan day trips.</p></article>
-    </section>
-
-    <!-- PHOTO TOUR: 12 IMAGES IN REQUESTED ORDER -->
-    <section class="section tinted" id="gallery">
-      <div class="section-heading">
-        <div><p class="eyebrow">Photo Tour</p><h2>Take a Look Around Clink's Cabin</h2></div>
-      </div>
-      <div class="gallery">
-        <figure><img src="images/living-room.jpg" alt="Living room at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Living Room</figcaption></figure>
-        <figure><img src="images/kitchen.jpg" alt="Kitchen at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Kitchen</figcaption></figure>
-        <figure><img src="images/dining-room.jpg" alt="Dining area at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Dining Area</figcaption></figure>
-        <figure><img src="images/entryway.jpg" alt="Entryway at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Entryway</figcaption></figure>
-        <figure><img src="images/bathroom-1.jpg" alt="Full bathroom 1 at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Full Bathroom 1</figcaption></figure>
-        <figure><img src="images/bathroom-2.jpg" alt="Full bathroom 2 at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Full Bathroom 2</figcaption></figure>
-        <figure><img src="images/laundry-room.jpg" alt="Laundry area at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Laundry Area</figcaption></figure>
-        <figure><img src="images/backyard.jpg" alt="Backyard at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Backyard</figcaption></figure>
-        <figure><img src="images/fire-pit.jpg" alt="Fire pit at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Fire Pit</figcaption></figure>
-        <figure><img src="images/deck-gazebo.jpg" alt="Deck and covered gazebo at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Deck and Gazebo</figcaption></figure>
-        <figure><img src="images/parking.jpg" alt="Guest parking at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Parking</figcaption></figure>
-        <figure><img src="images/winter-escape.jpg" alt="Clink's Cabin during winter" onerror="this.parentElement.classList.add('missing')"><figcaption>Winter Escape</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="section" id="sleep">
-      <p class="eyebrow">Sleeping arrangements</p>
-      <h2>Space for up to eight guests</h2>
-      <div class="cards">
-        <article class="card photo-card bedroom-1"><div class="card-copy"><h3>Bedroom 1</h3><p>Queen bed, television, ceiling fan, storage and room-darkening shades.</p></div></article>
-        <article class="card photo-card bedroom-2"><div class="card-copy"><h3>Bedroom 2</h3><p>Queen bed, sitting area, ceiling fan, storage and room-darkening shades.</p></div></article>
-        <article class="card photo-card bedroom-3"><div class="card-copy"><h3>Bedroom 3</h3><p>Two twin beds, television, ceiling fan, storage and room-darkening shades.</p></div></article>
-      </div>
-      <p class="note">Additional sleeping space is available on the living-room sofa bed.</p>
-    </section>
-
-    <section class="section split">
-      <div><p class="eyebrow">Everything you need</p><h2>Cabin amenities</h2><p>A practical vacation home for family trips, extended stays and year-round outdoor adventures.</p></div>
-      <div class="amenities">
-        <span>Full kitchen</span><span>Coffee station</span><span>Air conditioning</span><span>Wi-Fi</span>
-        <span>Washer and dryer</span><span>Iron and drying rack</span><span>Deck and gazebo</span><span>Fire pit</span>
-        <span>Backyard</span><span>Garage parking</span><span>Room-darkening shades</span><span>Family-friendly layout</span>
-      </div>
-    </section>
-
+    <section class="hero" id="top"><div class="hero-overlay"></div><div class="hero-content"><p class="eyebrow">Northern Michigan starts here</p><h1>Clink's Cabin</h1><p class="hero-copy">A comfortable Indian River retreat for lake days, trail adventures and evenings around the fire.</p><div class="facts" aria-label="Property highlights"><span>Sleeps 8</span><span>3 bedrooms</span><span>2 full bathrooms</span></div><div class="actions"><a class="button" href="#contact">Check Availability</a><a class="button ghost" href="#gallery">View the Cabin</a></div></div></section>
+    <section class="intro section" id="cabin"><div><p class="eyebrow">Welcome to Indian River</p><h2>Your comfortable home base for an Up North getaway</h2></div><div><p>Clink's Cabin combines relaxed indoor spaces, a fully equipped kitchen and inviting outdoor areas in a convenient Northern Michigan location. Spend the day boating, fishing, exploring nearby communities or enjoying winter recreation, then return to the deck, covered gazebo and fire pit.</p><p>The home accommodates up to eight guests with two queen bedrooms, a twin bedroom, a sofa bed and two full bathrooms.</p></div></section>
+    <section class="features section tinted"><article><span class="icon">⌂</span><h3>Room to gather</h3><p>Open living, dining and kitchen areas provide comfortable shared space for family and friends.</p></article><article><span class="icon">♨</span><h3>Outdoor living</h3><p>Enjoy the deck, covered gazebo, spacious yard and an outdoor fire pit gathering area.</p></article><article><span class="icon">≈</span><h3>Close to adventure</h3><p>Convenient to Burt Lake, Mullett Lake, nearby beaches, trails and Northern Michigan day trips.</p></article></section>
+    <section class="section tinted" id="gallery"><div class="section-heading"><div><p class="eyebrow">Photo Tour</p><h2>Take a Look Around Clink's Cabin</h2></div></div><div class="gallery">
+      <figure><img src="images/living-room.jpg" alt="Living room at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Living Room</figcaption></figure>
+      <figure><img src="images/kitchen.jpg" alt="Kitchen at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Kitchen</figcaption></figure>
+      <figure><img src="images/dining-room.jpg" alt="Dining area at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Dining Area</figcaption></figure>
+      <figure><img src="images/entryway.jpg" alt="Entryway at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Entryway</figcaption></figure>
+      <figure><img src="images/bathroom-1.jpg" alt="Full bathroom 1 at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Full Bathroom 1</figcaption></figure>
+      <figure><img src="images/bathroom-2.jpg" alt="Full bathroom 2 at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Full Bathroom 2</figcaption></figure>
+      <figure><img src="images/laundry-room.jpg" alt="Laundry area at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Laundry Area</figcaption></figure>
+      <figure><img src="images/backyard.jpg" alt="Backyard at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Backyard</figcaption></figure>
+      <figure><img src="images/fire-pit.jpg" alt="Fire pit at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Fire Pit</figcaption></figure>
+      <figure><img src="images/deck-gazebo.jpg" alt="Deck and covered gazebo at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Deck and Gazebo</figcaption></figure>
+      <figure><img src="images/parking.jpg" alt="Guest parking at Clink's Cabin" onerror="this.parentElement.classList.add('missing')"><figcaption>Parking</figcaption></figure>
+      <figure><img src="images/winter-escape.jpg" alt="Clink's Cabin during winter" onerror="this.parentElement.classList.add('missing')"><figcaption>Winter Escape</figcaption></figure>
+    </div></section>
+    <section class="section" id="sleep"><p class="eyebrow">Sleeping arrangements</p><h2>Space for up to eight guests</h2><div class="cards"><article class="card photo-card bedroom-1"><div class="card-copy"><h3>Bedroom 1</h3><p>Queen bed, television, ceiling fan, storage and room-darkening shades.</p></div></article><article class="card photo-card bedroom-2"><div class="card-copy"><h3>Bedroom 2</h3><p>Queen bed, sitting area, ceiling fan, storage and room-darkening shades.</p></div></article><article class="card photo-card bedroom-3"><div class="card-copy"><h3>Bedroom 3</h3><p>Two twin beds, television, ceiling fan, storage and room-darkening shades.</p></div></article></div><p class="note">Additional sleeping space is available on the living-room sofa bed.</p></section>
+    <section class="section split"><div><p class="eyebrow">Everything you need</p><h2>Cabin amenities</h2><p>A practical vacation home for family trips, extended stays and year-round outdoor adventures.</p></div><div class="amenities"><span>Full kitchen</span><span>Coffee station</span><span>Air conditioning</span><span>Wi-Fi</span><span>Washer and dryer</span><span>Iron and drying rack</span><span>Deck and gazebo</span><span>Fire pit</span><span>Backyard</span><span>Garage parking</span><span>Room-darkening shades</span><span>Family-friendly layout</span></div></section>
     <section class="area section" id="area">
-      <div class="area-copy">
-        <p class="eyebrow">Explore Northern Michigan</p>
-        <h2>Lake days, trail days and memorable day trips</h2>
-        <p>Clink's Cabin is located in Indian River near Burt Lake State Park, local lake access, DeVoe Beach and snowmobile trail access. It also provides a convenient starting point for visits to Mackinaw City, Mackinac Island, Petoskey and Cheboygan.</p>
-        <ul><li>Boating, fishing and beaches</li><li>Snowmobiling, skiing and snowboarding</li><li>Golf, wineries and scenic drives</li><li>Hiking and fall-colour trips</li></ul>
-      </div>
-      <div class="map-card">
-        <p class="map-label">In the Heart of Northern Michigan</p>
-        <div class="regional-map" aria-label="Regional location of Indian River, Michigan">
-          <div class="destination mackinaw">Mackinaw City</div><div class="destination cheboygan">Cheboygan</div>
-          <div class="destination petoskey">Petoskey</div><div class="destination burt">Burt Lake</div>
-          <div class="destination mullett">Mullett Lake</div><div class="destination cabin">Clink's Cabin<br><small>Indian River</small></div>
-        </div>
-        <p>Conveniently located for exploring lakes, trails and communities throughout Northern Michigan. Exact directions are shared with confirmed guests.</p>
-      </div>
+      <div class="area-copy"><p class="eyebrow">Explore Northern Michigan</p><h2>In the Heart of Northern Michigan</h2><p>Clink's Cabin is located in Indian River near Burt Lake State Park, local lake access, DeVoe Beach and snowmobile trail access. It also provides a convenient starting point for visits to Mackinaw City, Mackinac Island, Petoskey and Cheboygan.</p><ul class="area-highlights"><li>Boating, fishing and beaches</li><li>Snowmobiling, skiing and snowboarding</li><li>Golf, wineries and scenic drives</li><li>Hiking and fall-colour trips</li></ul></div>
+      <div class="map-card real-map-card"><div id="regional-map" class="leaflet-map" aria-label="Interactive map of Indian River and Northern Michigan"></div><p class="map-note">Map marker shows Clink's Cabin in Indian River. Exact directions are shared with confirmed guests.</p></div>
+      <div class="travel-strip" aria-label="Nearby destination distances and travel times"><div class="travel-item"><strong>1.2 miles</strong><span>Burt Lake State Park</span></div><div class="travel-item"><strong>1.3 miles</strong><span>DeVoe Beach &amp; Veterans Pier</span></div><div class="travel-item"><strong>27 min</strong><span>Cheboygan</span></div><div class="travel-item"><strong>28–31 min</strong><span>Petoskey</span></div><div class="travel-item"><strong>28 min</strong><span>Mackinaw City</span></div><div class="travel-item"><strong>Ferry</strong><span>Mackinac Island</span></div></div>
     </section>
-
-    <section class="contact section" id="contact">
-      <div>
-        <p class="eyebrow">Book direct</p><h2>Check availability</h2>
-        <p>Email your preferred dates, number of guests and any questions. We will reply with availability, pricing and booking details.</p>
-        <p class="direct-email"><a href="mailto:clinks.cabin@gmail.com?subject=Clink's%20Cabin%20availability%20request">clinks.cabin@gmail.com</a></p>
-      </div>
-      <form id="inquiry-form">
-        <label>Name<input required name="name" autocomplete="name"></label>
-        <div class="form-row"><label>Arrival<input required type="date" name="arrival"></label><label>Departure<input required type="date" name="departure"></label></div>
-        <label>Number of guests<input required type="number" name="guests" min="1" max="8" value="2"></label>
-        <label>Questions or notes<textarea name="message" rows="4" placeholder="Tell us about your trip"></textarea></label>
-        <button class="button" type="submit">Create Email Enquiry</button>
-        <p class="form-note">This opens your email app with the enquiry details. No personal information is stored by this website.</p>
-      </form>
-    </section>
+    <section class="contact section" id="contact"><div><p class="eyebrow">Book direct</p><h2>Check availability</h2><p>Email your preferred dates, number of guests and any questions. We will reply with availability, pricing and booking details.</p><p class="direct-email"><a href="mailto:clinks.cabin@gmail.com?subject=Clink's%20Cabin%20availability%20request">clinks.cabin@gmail.com</a></p></div><form id="inquiry-form"><label>Name<input required name="name" autocomplete="name"></label><div class="form-row"><label>Arrival<input required type="date" name="arrival"></label><label>Departure<input required type="date" name="departure"></label></div><label>Number of guests<input required type="number" name="guests" min="1" max="8" value="2"></label><label>Questions or notes<textarea name="message" rows="4" placeholder="Tell us about your trip"></textarea></label><button class="button" type="submit">Create Email Enquiry</button><p class="form-note">This opens your email app with the enquiry details. No personal information is stored by this website.</p></form></section>
   </main>
-
-  <footer>
-    <div><strong>Clink's Cabin</strong><p>Indian River, Michigan</p></div>
-    <div><a href="mailto:clinks.cabin@gmail.com">clinks.cabin@gmail.com</a><p>© <span id="year"></span> Clink's Cabin</p></div>
-  </footer>
+  <footer><div><strong>Clink's Cabin</strong><p>Indian River, Michigan</p></div><div><a href="mailto:clinks.cabin@gmail.com">clinks.cabin@gmail.com</a><p>© <span id="year"></span> Clink's Cabin</p></div></footer>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9coqIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="script.js"></script>
 </body>
 </html>
