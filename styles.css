@@ -93,7 +93,8 @@ body {
   text-align: center;
   color: #fff;
   position: relative;
-  background: linear-gradient(120deg, #153b32, #3e6758), url('images/hero-exterior.jpg') center / cover;
+  background:
+    url('images/hero-exterior.jpg') center / cover no-repeat;
 }
 .hero-overlay {
   position: absolute;
