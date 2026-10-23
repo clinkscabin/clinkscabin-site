@@ -41,9 +41,19 @@ Thank you.`);
   });
 }
 
-/* Real regional map using Leaflet + OpenStreetMap */
-if (typeof L !== 'undefined' && document.getElementById('regional-map')) {
-  const map = L.map('regional-map', { scrollWheelZoom: false, zoomControl: true });
+/* Real  map using Leaflet + OpenStreetMap */
+if (typeof L !== 'undefined' && document.getElementById('-map')) {
+const map = L.map('regional-map', {
+  scrollWheelZoom: false,
+  doubleClickZoom: false,
+  touchZoom: false,
+  boxZoom: false,
+  keyboard: false,
+  dragging: false,
+  zoomControl: true,
+  minZoom: 9,
+  maxZoom: 10
+});
 
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -53,7 +63,7 @@ if (typeof L !== 'undefined' && document.getElementById('regional-map')) {
   /* View includes Burt Lake, Mullett Lake, Indian River and wider regional context. */
   map.fitBounds([[45.30, -85.05], [45.82, -84.30]]);
 
-  const cabin = [45.3903056634, -84.6272972507];
+.bindPopup("<strong>Clink's Cabin</strong><br>Indian River, Michigan");
   const cabinIcon = L.divIcon({
     className: 'cabin-map-marker',
     html: '<span aria-hidden="true">★</span>',
