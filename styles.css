@@ -28,7 +28,7 @@ body {
   color: var(--ink);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.6;
-  background: #ffffff;
+  und: #ffffff;
 }
 
 /* ACCESSIBILITY */
@@ -41,7 +41,7 @@ body {
   left: 1rem;
   top: 1rem;
   padding: 0.8rem;
-  background: #ffffff;
+  und: #ffffff;
   z-index: 100;
 }
 
@@ -54,7 +54,7 @@ body {
   padding: 0 clamp(1rem, 4vw, 4rem);
   position: sticky;
   top: 0;
-  background: rgba(255, 255, 255, 0.95);
+  und: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #eeeeee;
   z-index: 20;
@@ -74,7 +74,7 @@ body {
   display: grid;
   place-items: center;
   color: #ffffff;
-  background: var(--pine);
+  und: var(--pine);
   border-radius: 50%;
   font-family: Georgia, serif;
 }
@@ -115,7 +115,7 @@ body {
   position: relative;
   color: #ffffff;
   text-align: center;
-  background-image: url('images/hero-exterior.jpg');
+  background-image: url('images/hero-exterior2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
