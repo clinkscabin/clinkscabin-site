@@ -402,3 +402,7 @@ footer { display:flex; justify-content:space-between; padding:2rem clamp(1.25rem
   font-size: 0.8rem;
   line-height: 1.4;
 }
+/* Final Explore alignment */
+.real-map-card {
+  margin-top: 2.4rem;
+}
