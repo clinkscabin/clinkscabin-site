@@ -53,3 +53,220 @@ body { margin:0; color:var(--ink); font-family:Inter,ui-sans-serif,system-ui,-ap
 footer { display:flex; justify-content:space-between; padding:2rem clamp(1.25rem,7vw,7rem); color:#fff; background:var(--pine2); } footer a { color:#fff; }
 @media (max-width:850px) { .menu-toggle { display:block; padding:.55rem .7rem; background:#fff; border:1px solid #ccd4cf; } .site-header nav { display:none; position:absolute; top:78px; right:0; left:0; flex-direction:column; padding:1rem; background:#fff; box-shadow:var(--shadow); } .site-header nav.open { display:flex; } .intro,.split,.area,.contact { grid-template-columns:1fr; gap:2.5rem; } .features,.cards { grid-template-columns:1fr; } .photo-card { min-height:360px; } .section-heading { display:block; } .gallery { grid-template-columns:repeat(2,minmax(0,1fr)); } .gallery figure,.gallery figure.wide { grid-column:span 1; } .leaflet-map { min-height:420px; } .travel-strip { grid-template-columns:repeat(2,1fr); } .travel-item { border-bottom:1px solid rgba(255,255,255,.14); } }
 @media (max-width:540px) { .brand small { display:none; } .hero h1 { font-size:clamp(3rem,16vw,4.7rem); } .hero-content { padding:2.2rem 1.25rem; margin:0 1rem; } .gallery { grid-template-columns:1fr; grid-auto-rows:230px; } .gallery figure,.gallery figure.wide { grid-column:span 1; } .amenities,.form-row { grid-template-columns:1fr; } .hero { min-height:82vh; } .leaflet-map { min-height:360px; } .travel-strip { grid-template-columns:1fr; } .travel-item { border-right:0; padding:.75rem 0; } footer { display:block; } .site-header { padding:0 1rem; } }
+
+/* ========================================
+   EXPLORE NORTHERN MICHIGAN - POLISHED
+   Replace the existing .area / map / travel-strip rules with this block.
+   ======================================== */
+.area {
+  display: grid;
+  grid-template-columns: minmax(0, 0.68fr) minmax(0, 1.32fr);
+  align-items: start;
+  gap: 3.25rem;
+  padding-top: clamp(4rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3rem, 5vw, 4.25rem);
+  color: #ffffff;
+  background: var(--pine);
+}
+
+.area h2 {
+  max-width: 620px;
+  margin-bottom: 1.35rem;
+  color: #ffffff;
+}
+
+.area-intro {
+  max-width: 620px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.area-highlights {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.8rem;
+  margin-top: 2rem;
+}
+
+.area-highlight {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 0.98rem;
+}
+
+.area-icon {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: var(--rust);
+  border-radius: 50%;
+  font-size: 0.82rem;
+  font-weight: 900;
+}
+
+.real-map-card {
+  align-self: stretch;
+  padding: 0;
+  overflow: hidden;
+  color: var(--ink);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 22px 50px rgba(3, 27, 22, 0.28);
+}
+
+.leaflet-map {
+  width: 100%;
+  height: 440px;
+  min-height: 440px;
+  border-radius: 16px 16px 0 0;
+}
+
+.map-note {
+  margin: 0;
+  padding: 0.8rem 1rem;
+  color: #52615b;
+  background: #ffffff;
+  border-top: 1px solid #e7ece8;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.cabin-map-marker {
+  display: grid;
+  place-items: center;
+  color: var(--rust);
+  background: transparent;
+  font-size: 42px;
+  line-height: 1;
+  text-shadow:
+    -1px -1px 0 #ffffff,
+     1px -1px 0 #ffffff,
+    -1px  1px 0 #ffffff,
+     1px  1px 0 #ffffff,
+     0 3px 8px rgba(0, 0, 0, 0.28);
+}
+
+.travel-strip {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  margin-top: 0.45rem;
+  padding-top: 1.15rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.travel-item {
+  min-width: 0;
+  padding: 0.25rem 0.85rem 0.15rem;
+  text-align: center;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.travel-item:last-child {
+  border-right: 0;
+}
+
+.travel-icon {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 0.4rem;
+  color: #ffffff;
+  background: var(--rust);
+  border-radius: 50%;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.travel-item strong,
+.travel-item > span:last-child {
+  display: block;
+}
+
+.travel-item strong {
+  color: #d9784c;
+  font-size: 1.18rem;
+  font-weight: 850;
+  line-height: 1.15;
+}
+
+.travel-item > span:last-child {
+  margin-top: 0.3rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 0.82rem;
+  line-height: 1.3;
+}
+
+@media (max-width: 1050px) {
+  .area {
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 2.25rem;
+  }
+
+  .travel-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 1rem;
+  }
+
+  .travel-item:nth-child(3) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 850px) {
+  .area {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .leaflet-map {
+    height: 420px;
+    min-height: 420px;
+  }
+
+  .travel-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .travel-item:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
+  .travel-item:nth-child(even) {
+    border-right: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .area {
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .leaflet-map {
+    height: 360px;
+    min-height: 360px;
+  }
+
+  .travel-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .travel-item {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .area-highlight {
+    align-items: flex-start;
+  }
+}
