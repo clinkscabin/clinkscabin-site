@@ -46,10 +46,6 @@ if (form) {
    ======================================== */
 
 if (typeof L !== 'undefined' && document.getElementById('regional-map')) {
-  /*
-    Keep the exact cabin marker, but deliberately restrict the public map
-    to a fixed regional view. Visitors cannot zoom in beyond zoom level 9.
-  */
   const cabin = [45.3903056634, -84.6272972507];
 
   const map = L.map('regional-map', {
